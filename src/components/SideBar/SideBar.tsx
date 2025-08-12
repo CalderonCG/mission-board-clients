@@ -9,7 +9,6 @@ import {
   LuBookKey,
   LuPanelsTopLeft,
   LuSquareStack,
-  LuUser,
 } from "react-icons/lu";
 import { FaChartLine } from "react-icons/fa6";
 import { useState } from "react";
@@ -17,14 +16,17 @@ import { useState } from "react";
 function SideBar() {
   const [open, setOpen] = useState(false);
 
-
   return (
-    <div className={`sidebar ${open?'openSidebar':''}`}>
+    <div className={`sidebar ${open ? "openSidebar" : ""}`}>
       <div className="sidebar_header">
-        <LuTimer className="sidebar_header_icon" />
-        <p>Resource Planning</p>
-        <TbLayoutSidebarLeftExpand onClick={()=>setOpen(!open)}
-        className="sidebar_header_expand"/>
+        <div className="sidebar_header_title">
+          <LuTimer className="sidebar_header_icon" />
+          <p>Resource Planning</p>
+        </div>
+        <TbLayoutSidebarLeftExpand
+          onClick={() => setOpen(!open)}
+          className="sidebar_header_expand"
+        />
       </div>
 
       <div className="sidebar_list">
@@ -64,7 +66,7 @@ function SideBar() {
       </div>
 
       <div className="sidebar_user">
-        <LuUser />
+        <img src="/assets/cv.jpg" alt="" className="sidebar_user_avatar" />
         <p>Christopher Calderón</p>
       </div>
     </div>

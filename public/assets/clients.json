@@ -1,92 +1,17 @@
 [
-  {
-    "id": 1,
-    "name": "Mission Board",
-    "status": "Active",
-    "projects": 8
-  },
-  {
-    "id": 2,
-    "name": "Skullcandy",
-    "status": "Prospective",
-    "projects": 7
-  },
-  {
-    "id": 3,
-    "name": "First Colony Morgage",
-    "status": "Active",
-    "projects": 12
-  },
-  {
-    "id": 4,
-    "name": "Dime Beauty",
-    "status": "Prospective",
-    "projects": 2
-  },
-  {
-    "id": 5,
-    "name": "Ride Dog",
-    "status": "Active",
-    "projects": 15
-  },
-  {
-    "id": 6,
-    "name": "Purco",
-    "status": "Active",
-    "projects": 9
-  },
-  {
-    "id": 7,
-    "name": "Legrand",
-    "status": "Prospective",
-    "projects": 8
-  },
-  {
-    "id": 8,
-    "name": "Luxul",
-    "status": "Archived",
-    "projects": 1
-  },
-  {
-    "id": 9,
-    "name": "Unie",
-    "status": "Active",
-    "projects": 2
-  },
-  {
-    "id": 10,
-    "name": "Unie",
-    "status": "Active",
-    "projects": 4
-  },
-  {
-    "id": 11,
-    "name": "Vssl",
-    "status": "Archived",
-    "projects": 8
-  },
-  {
-    "id": 12,
-    "name": "TechNova",
-    "status": "Prospective",
-    "projects": 5
-  },
-  {
-    "id": 13,
-    "name": "GreenWave Solutions",
-    "status": "Active",
-    "projects": 11
-  },
-  {
-    "id": 14,
-    "name": "UrbanEdge",
-    "status": "Archived",
-    "projects": 3
-  },
-  {
-    "id": 15,
-    "name": "BrightPath Consulting",
-    "status": "Active",
-    "projects": 6
-  }
+  { "id": 1, "name": "Blue Horizon Group", "status": "Active", "projects": 8 },
+  { "id": 2, "name": "Northwind Ventures", "status": "Prospective", "projects": 7 },
+  { "id": 3, "name": "Silvercrest Solutions", "status": "Active", "projects": 12 },
+  { "id": 4, "name": "Everstone Partners", "status": "Prospective", "projects": 2 },
+  { "id": 5, "name": "Ironwood Consulting", "status": "Active", "projects": 15 },
+  { "id": 6, "name": "Cypress Point Technologies", "status": "Active", "projects": 9 },
+  { "id": 7, "name": "Redtree Global", "status": "Prospective", "projects": 8 },
+  { "id": 8, "name": "Summit Edge Industries", "status": "Archived", "projects": 1 },
+  { "id": 9, "name": "Brightforge Analytics", "status": "Active", "projects": 2 },
+  { "id": 10, "name": "NovaTrail Solutions", "status": "Active", "projects": 4 },
+  { "id": 11, "name": "Greenvale Dynamics", "status": "Archived", "projects": 8 },
+  { "id": 12, "name": "Stonebridge Strategies", "status": "Prospective", "projects": 5 },
+  { "id": 13, "name": "Clearwave Innovations", "status": "Active", "projects": 11 },
+  { "id": 14, "name": "Urbanleaf Enterprises", "status": "Archived", "projects": 3 },
+  { "id": 15, "name": "Nextpath Advisors", "status": "Active", "projects": 6 }
 ]
