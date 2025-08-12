@@ -1,0 +1,50 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.sidebar {
+  width: 14.625rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: solid 3px v.$color-archived;
+  button {
+    display: flex;
+    background-color: inherit;
+    border: none;
+    gap: 1rem;
+    padding: 0.8rem 2rem;
+
+    &:hover {
+      color: v.$color-primary;
+      background-color: #f5f3ff;
+    }
+  }
+
+  &_header {
+    @include m.flexCenter(row, center);
+    flex: 0 0 auto;
+    gap: 0.2rem;
+    display: flex;
+    font-size: 1rem;
+    padding: 0rem 1rem;
+    
+  border-bottom: solid 0.125rem v.$color-archived;
+    height: 3.125rem;
+    color: v.$color-primary;
+  }
+  &_list {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 3px v.$color-archived;
+    flex: 1 1 auto;
+  }
+
+  &_user {
+    @include m.flexCenter(row, center);
+    flex: 0 0 auto;
+    gap: 0.2rem;
+    padding: 0.8rem 1rem;
+    display: flex;
+    font-size: 1rem;
+  }
+}
