@@ -1,0 +1,18 @@
+@use "../../styles/mixins" as m;
+
+.button {
+  @include m.flexCenter(row, space-between);
+  @include m.buttonBorder();
+  padding: 8px 16px;
+  gap: 0.5rem;
+
+
+  &_icon {
+    font-size: 1rem;
+  }
+
+  p{
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

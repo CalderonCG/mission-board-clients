@@ -1,6 +1,16 @@
+@use "./variables" as v;
+
+
 @mixin flexCenter($direction, $position){
     display: flex;
     justify-content: $position;
     align-items: center;
     flex-direction: $direction;
+}
+
+@mixin buttonBorder(){
+    border: 0.125rem solid v.$color-archived;
+    border-radius: 0.5rem ;
+    background-color: white;
+
 }
