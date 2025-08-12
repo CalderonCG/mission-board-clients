@@ -1,0 +1,23 @@
+@use '../../styles/mixins' as m;
+
+.search {
+  @include m.flexCenter(row, center);
+  height: 2rem;
+  position: relative;
+      &:hover{
+        border: 1px solid black;
+    }
+}
+
+.input{
+    height: 100%;
+    border: none;
+
+}
+
+.icon{
+    font-size: 1.4rem;
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+}

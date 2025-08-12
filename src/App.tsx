@@ -1,12 +1,13 @@
 
 import './App.scss'
+import Clients from './pages/Clients'
 
 function App() {
 
   return (
-    <>
-    holi
-    </>
+    <div className='layout'>
+      <Clients/>
+    </div>
   )
 }
 
