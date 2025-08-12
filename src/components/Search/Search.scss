@@ -3,7 +3,7 @@
 .search {
   @include m.flexCenter(row, center);
   height: 2rem;
-
+  width: 15.3125rem;
   border-radius: 0.5rem;
   position: relative;
   &:hover {
@@ -13,6 +13,7 @@
 
 .input {
   height: 100%;
+  width: 100%;
   border: none;
   padding: 0.3125rem;
   border-radius: 0.5rem;

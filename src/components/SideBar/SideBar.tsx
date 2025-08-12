@@ -1,4 +1,5 @@
 import "./Sidebar.scss";
+import { TbLayoutSidebarLeftExpand } from "react-icons/tb";
 import {
   LuTimer,
   LuHandshake,
@@ -8,17 +9,22 @@ import {
   LuBookKey,
   LuPanelsTopLeft,
   LuSquareStack,
-  LuBook,
   LuUser,
 } from "react-icons/lu";
 import { FaChartLine } from "react-icons/fa6";
+import { useState } from "react";
 
 function SideBar() {
+  const [open, setOpen] = useState(false);
+
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${open?'openSidebar':''}`}>
       <div className="sidebar_header">
         <LuTimer className="sidebar_header_icon" />
         <p>Resource Planning</p>
+        <TbLayoutSidebarLeftExpand onClick={()=>setOpen(!open)}
+        className="sidebar_header_expand"/>
       </div>
 
       <div className="sidebar_list">
@@ -58,7 +64,7 @@ function SideBar() {
       </div>
 
       <div className="sidebar_user">
-        <LuUser/>
+        <LuUser />
         <p>Christopher Calderón</p>
       </div>
     </div>

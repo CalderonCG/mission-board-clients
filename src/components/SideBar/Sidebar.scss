@@ -2,17 +2,26 @@
 @use "../../styles/mixins" as m;
 
 .sidebar {
-  width: 14.625rem;
+  max-width: 1px;
+
+  transition: max-width 0.4s ease;
+  overflow: hidden;
   height: 100%;
   display: flex;
   flex-direction: column;
   border-right: solid 3px v.$color-archived;
+
+  &:hover {
+    max-width: 14.625rem;
+    width: 14.625rem;
+  }
+
   button {
     display: flex;
     background-color: inherit;
     border: none;
     gap: 1rem;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
 
     &:hover {
       color: v.$color-primary;
@@ -26,11 +35,20 @@
     gap: 0.2rem;
     display: flex;
     font-size: 1rem;
-    padding: 0rem 1rem;
-    
-  border-bottom: solid 0.125rem v.$color-archived;
+    padding: 0rem 0rem;
+    border-bottom: solid 0.125rem v.$color-archived;
     height: 3.125rem;
     color: v.$color-primary;
+
+    &_expand{
+      color: black;
+      margin-left: 0.8rem;
+      font-size: 1.2rem;
+
+      &:hover{
+        color: v.$color-primary;
+      }
+    }
   }
   &_list {
     display: flex;
@@ -43,8 +61,13 @@
     @include m.flexCenter(row, center);
     flex: 0 0 auto;
     gap: 0.2rem;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 0.5rem;
     display: flex;
     font-size: 1rem;
   }
+}
+
+.openSidebar{
+    max-width: 14.625rem;
+    width: 14.625rem;
 }
