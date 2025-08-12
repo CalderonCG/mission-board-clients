@@ -10,14 +10,15 @@ import { useState } from "react";
 function Clients() {
 
   const [filter, setFilter] = useState<'All'|'Archived'|'Active'|'Prospective'>('All');
+  const [search, setSearch] = useState<string>('')
 
-    console.log(filter)
+
   return (
     <div className="clients">
       <div className="header">
         <h1>Clients</h1>
         <div className="header_controls">
-          <Search />
+          <Search handleSearch={(value:string)=>setSearch(value)} />
           <button className="header_add">
             <IoAddOutline className="header_add_icon" />
           </button>
@@ -28,7 +29,7 @@ function Clients() {
         <FilterButton handleChange={(value: 'All'|'Archived'|'Active'|'Prospective')=>setFilter(value)}/>
         <DisplayButton />
       </div>
-        <ClientList filter={filter} />
+        <ClientList filter={filter} search={search}/>
 
 
       <div className="pages">

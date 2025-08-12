@@ -2,11 +2,14 @@ import { TbAdjustmentsHorizontal } from "react-icons/tb";
 
 function DisplayButton() {
   return (
-        <button className="button">
-          <TbAdjustmentsHorizontal className="button_icon" />
-          <p>Display</p>
-        </button>
-  )
+    <button className="button">
+      <div className="button_content">
+        <TbAdjustmentsHorizontal className="button_icon" />
+
+        <p>Display</p>
+      </div>
+    </button>
+  );
 }
 
-export default DisplayButton
+export default DisplayButton;

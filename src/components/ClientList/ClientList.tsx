@@ -6,9 +6,9 @@ import { getClients, type ClientType } from "../../services/ClientServices";
 const clientPromise: Promise<ClientType[]> = getClients();
 
 export function ClientList({
-  filter,
+  filter, search
 }: {
-  filter: "All" | "Archived" | "Active" | "Prospective";
+  filter: "All" | "Archived" | "Active" | "Prospective", search: string
 }) {
   const Clients = use(clientPromise);
   let filteredList = Clients;
@@ -18,9 +18,11 @@ export function ClientList({
 
   return (
     <div className="list">
-      {filteredList.map((client) => (
+      {search.trim() !== '' ? filteredList.filter((client) => client.name.toLowerCase().startsWith(search.toLowerCase())).map((client) => (
         <ClientCard client={client} key={client.id} />
-      ))}
+      )) : filteredList.map((client) => (
+        <ClientCard client={client} key={client.id} />
+      )) }
     </div>
   );
 }

@@ -33,7 +33,6 @@
   transition: max-height 0.3s ease;
   background-color: inherit;
   top: 100%;
-  padding: 0.4rem 1rem;
   button {
     padding: 0.3rem 0;
     text-align: left;
@@ -48,6 +47,8 @@
   }
 
   &.open {
-    max-height: 200px; // valor suficientemente grande para mostrar todo
+    max-height: 200px;
+
+    padding: 0.4rem 1rem;
   }
 }
