@@ -4,8 +4,14 @@ import { IoAddOutline } from "react-icons/io5";
 import "./Client.scss";
 import FilterButton from "../components/FilterButton/FilterButton";
 import DisplayButton from "../components/DisplayButton/DisplayButton";
+import { ClientList } from "../components/ClientList/ClientList";
+import { useState } from "react";
 
 function Clients() {
+
+  const [filter, setFilter] = useState<'All'|'Archived'|'Active'|'Prospective'>('All');
+
+    console.log(filter)
   return (
     <div className="clients">
       <div className="header">
@@ -19,13 +25,11 @@ function Clients() {
       </div>
 
       <div className="filters">
-        <FilterButton />
+        <FilterButton handleChange={(value: 'All'|'Archived'|'Active'|'Prospective')=>setFilter(value)}/>
         <DisplayButton />
       </div>
+        <ClientList filter={filter} />
 
-      <div className="list">
-        <p>Total 72 rows</p>
-      </div>
 
       <div className="pages">
         <p>Total 72 rows</p>

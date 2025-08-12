@@ -1,18 +1,53 @@
 @use "../../styles/mixins" as m;
 
 .button {
-  @include m.flexCenter(row, space-between);
+  @include m.flexCenter(column, start);
   @include m.buttonBorder();
-  padding: 8px 16px;
-  gap: 0.5rem;
+  position: relative;
+  padding: 0.4rem 1rem;
 
+  &_content {
+    @include m.flexCenter(row, center);
+    width: 100%;
+    gap: 1rem;
+  }
 
   &_icon {
     font-size: 1rem;
   }
 
-  p{
+  p {
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.selection {
+  @include m.buttonBorder();
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  transition: max-height 0.3s ease;
+  background-color: inherit;
+  top: 100%;
+  padding: 0.4rem 1rem;
+  button {
+    padding: 0.3rem 0;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #f0f0f0;
+    }
+  }
+
+  &.open {
+    max-height: 200px; // valor suficientemente grande para mostrar todo
   }
 }
